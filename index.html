@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXSTEP | Believe Your Limits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXSTEP | Believe Your Limits</title>
+
+    <link rel="icon" type="png" href="NEXSTEP Neon Emblem Wallpaper .png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+<!-- NAVBAR -->
+<header class="navbar">
+    <a href="#" class="logo">NEX<span>STEP</span></a>
+
+    <nav>
+        <a href="#home" data-i18n="home">Home</a>
+        <a href="#catalog" data-i18n="catalog">Katalog</a>
+        <a href="#about" data-i18n="about">Tentang</a>
+        <a href="#contact" data-i18n="contact">Kontak</a>
+    </nav>
+
+    <div class="navbar-actions">
+        <select id="languageSelect" aria-label="Choose language">
+            <option value="id">🇮🇩 Indonesia</option>
+            <option value="en">🇬🇧 English</option>
+        </select>
+
+        <button class="cart-button" onclick="toggleCart()">
+            🛒 <span data-i18n="cart">Keranjang</span>
+            <span id="cart-count">0</span>
+        </button>
+    </div>
+</header>
+
+ <button class="cart-button" onclick="toggleCart()">
+        🛒 Keranjang
+        <span id="cart-count">0</span>
+    </button>
+</header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="lightning lightning-left"></div>
+        <div class="lightning lightning-right"></div>
+
+        <div class="hero-content">
+            <p class="hero-label">NEXT GENERATION SPORT SHOES</p>
+
+            <h1>
+                BELIEVE<br>
+                YOUR <span>LIMITS.</span>
+            </h1>
+
+            <p class="hero-description">
+                Siap melampaui batas kemampuanmu?
+                <b>NEXSTEP</b> hadir sebagai teman setia
+                di setiap langkah dan lari terbaikmu.
+                Dirancang dengan teknologi Air-Cushion
+                Responsive Sole untuk kenyamanan maksimal.
+            </p>
+
+            <a href="#catalog" class="hero-button">
+                JELAJAHI KATALOG →
+            </a>
+        </div>
+
+        <div class="hero-image">
+            
+<div class="hero-image">
+
+    <div class="image-glow"></div>
+
+    <!-- Cincin energi -->
+    <div class="energy-ring"></div>
+    <div class="energy-ring ring-two"></div>
+
+    <!-- Partikel -->
+    <div class="cyber-particles"></div>
+
+    <!-- Sepatu utama -->
+    <img src="sepatu-nexstep.png"
+         alt="Sepatu Futuristik NEXSTEP">
+
+    <!-- Panel informasi -->
+    <div class="shoe-hud">
+        <span>NX-01 / FUTURE SERIES</span>
+        <strong>NEW GENERATION</strong>
+        <small>ENGINEERED FOR SPEED</small>
+    </div>
+
+</div>
+
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900"
+                alt="Sepatu olahraga NEXSTEP">
+            <div class="image-glow"></div>
+        </div>
+
+        <div class="hero-bottom">
+            <span>PERFORMANCE</span>
+            <span>COMFORT</span>
+            <span>INNOVATION</span>
+        </div>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="category-section">
+        <div class="section-heading">
+            <p>EXPLORE YOUR GAME</p>
+            <h2>KATEGORI <span>OLAHRAGA</span></h2>
+        </div>
+
+        <div class="category-list">
+            <button class="category-chip active" onclick="filterCategory('all')">Semua</button>
+            <button class="category-chip" onclick="filterCategory('futsal')">Futsal</button>
+            <button class="category-chip" onclick="filterCategory('basket')">Basket</button>
+            <button class="category-chip" onclick="filterCategory('voli')">Voli</button>
+            <button class="category-chip" onclick="filterCategory('running')">Running</button>
+            <button class="category-chip" onclick="filterCategory('badminton')">Badminton</button>
+            <button class="category-chip" onclick="filterCategory('sepak-bola')">Sepak Bola</button>
+            <button class="category-chip" onclick="filterCategory('mini-soccer')">Mini Soccer</button>
+        </div>
+    </section>
+
+    <!-- CATALOG -->
+    <main class="catalog-section" id="catalog">
+        <div class="catalog-heading">
+            <div>
+                <p>PREMIUM COLLECTION</p>
+                <h2>OUR <span>PRODUCTS</span></h2>
+            </div>
+
+            <div class="catalog-controls">
+                <input
+                    type="search"
+                    id="search-input"
+                    placeholder="Cari sepatu..."
+                    oninput="searchProducts()">
+
+                <select id="sort-select" onchange="sortProducts()">
+                    <option value="default">Urutkan</option>
+                    <option value="low">Harga terendah</option>
+                    <option value="high">Harga tertinggi</option>
+                    <option value="name">Nama A-Z</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+            <!-- Produk dimunculkan melalui script.js -->
+        </div>
+    </main>
+    <!-- BAGIAN KATALOG -->
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <p>WHO WE ARE</p>
+            <h2>STEP BEYOND<br><span>YOUR LIMITS.</span></h2>
+
+            <p>
+                NEXSTEP adalah konsep katalog sepatu olahraga
+                yang menghadirkan berbagai pilihan sepatu untuk
+                membantu setiap atlet dan pecinta olahraga
+                menemukan perlengkapan yang sesuai dengan
+                aktivitas mereka dan NEXSTEP berawal dari ide dan kreativitas dua siswa SMP kelas VIII, yaitu Muhammad Raffa Al Fareezy dan Muhammad Irfan Maulana, yang akrab disapa Rafael dan Irfan.
+
+Saat ini, Rafael dan Irfan merupakan siswa SMP Progresif Bumi Shalawat. Berawal dari ketertarikan terhadap dunia olahraga dan teknologi, mereka mencoba menuangkan ide kreatif menjadi sebuah website bernama NEXSTEP.
+
+Website ini merupakan karya yang mereka kembangkan sebagai bentuk kreativitas, inovasi, dan semangat untuk terus belajar.
+
+Inilah NEXSTEP, hasil karya sederhana dengan semangat luar biasa.
+
+Selamat menjelajahi NEXSTEP. Believe Your Limits!
+            </p>
+        </div>
+
+        <div class="about-stats">
+            <div>
+                <h3>07</h3>
+                <p>KATEGORI</p>
+            </div>
+            <div>
+                <h3>35</h3>
+                <p>PRODUK</p>
+            </div>
+            <div>
+                <h3>100%</h3>
+                <p>SPORT SPIRIT</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART PANEL -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <aside class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>KERANJANG</h2>
+            <button onclick="toggleCart()">✕</button>
+        </div>
+
+        <div id="cart-items">
+            <p class="empty-cart">Keranjang masih kosong.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">Rp0</strong>
+            </div>
+            <button class="checkout-button" onclick="checkout()">
+                CHECKOUT
+            </button>
+        </div>
+    </aside>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="product-modal-content">
+            <button class="modal-close" onclick="closeProductModal()">✕</button>
+            <div id="product-detail"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+     
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+
+    <div class="contact-heading">
+        <p>GET IN TOUCH</p>
+        <h2>CONTACT <span>US</span></h2>
+        <p class="contact-description">
+            Punya pertanyaan atau ingin mengetahui lebih
+            lanjut tentang produk NEXSTEP? Hubungi kami!
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <div class="contact-icon">💬</div>
+
+            <h3>WHATSAPP</h3>
+
+            <p>
+                Hubungi kami secara langsung melalui WhatsApp.
+            </p>
+
+            <h4>+62 823-3321-09084</h4>
+
+            <a
+                href="https://wa.me/62823332109084"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-button">
+
+                CHAT VIA WHATSAPP →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <footer>
+        <a href="#" class="logo">NEX<span>STEP</span></a>
+        <p>BELIEVE YOUR LIMITS.</p>
+        <small>© 2026 NEXSTEP. ALL RIGHTS RESERVED.</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</hTML
+
